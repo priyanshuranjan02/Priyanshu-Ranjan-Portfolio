@@ -1,73 +1,208 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# 👋 Hi, I'm Priyanshu Ranjan
 
-**URL**: https://lovable.dev/projects/c62d6626-d3a9-4bf1-9fb2-d637a2810d69
+### Aspiring Data Analyst | Full-Stack Developer | AI/ML Enthusiast
 
-## How can I edit this code?
+Building intelligent applications, scalable web solutions, and data-driven analytics platforms.
 
-There are several ways of editing your application.
+<br>
 
-**Use Lovable**
+[![Portfolio](https://img.shields.io/badge/🌐-Portfolio-2563EB?style=for-the-badge)](https://priyanshu02-portfolio.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/priyanshu-ranjan-74170a227)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/priyanshuranjan02)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c62d6626-d3a9-4bf1-9fb2-d637a2810d69) and start prompting.
+</div>
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📌 About
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+I'm a B.Tech Computer Science (AI & ML) undergraduate at **VIT Bhopal University** passionate about building AI-powered applications, scalable full-stack systems, and data analytics solutions.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+I enjoy solving real-world problems through technology and continuously learning modern software development, machine learning, cloud computing, and analytics.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Languages
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Java
+- Python
+- SQL
+- JavaScript
+- TypeScript
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Frontend
+
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Vite
+
+### Backend
+
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+
+### Databases
+
+- MongoDB
+- MySQL
+- Supabase
+
+### AI & Data
+
+- Machine Learning
+- Scikit-learn
+- Pandas
+- NumPy
+- Data Analytics
+
+### Cloud & Tools
+
+- AWS
+- Oracle Cloud
+- Google Cloud
+- Git
+- GitHub
+- Postman
+
+---
+
+# ✨ Features
+
+- Modern responsive UI
+- Dark / Light theme
+- Smooth animations using Framer Motion
+- Interactive project showcase
+- Professional experience timeline
+- Skills & certifications section
+- Resume download
+- Contact section
+- Mobile friendly
+- Optimized performance
+
+---
+
+# 📂 Featured Projects
+
+## 🚑 AI HealthBot Companion
+
+An AI-powered multilingual healthcare platform integrating Gemini AI for intelligent symptom assessment and preliminary health guidance.
+
+**Highlights**
+
+- AI-powered symptom assessment
+- 3-level health risk triage
+- Secure authentication
+- PDF report generation
+- NGO analytics dashboard
+
+**Tech Stack**
+
+React • Node.js • Supabase • Gemini AI • TypeScript
+
+---
+
+## 📊 Aadhaar Insights Analytics Platform
+
+An end-to-end analytics platform processing **3.37M+ UIDAI records** to generate interactive dashboards, insights, and forecasting models.
+
+**Highlights**
+
+- Interactive dashboards
+- Trend analysis
+- KPI monitoring
+- Predictive analytics
+- Recommendation generation
+
+**Tech Stack**
+
+Python • Streamlit • Power BI • Tableau • Machine Learning
+
+---
+
+## 🚖 Swayam Saarthi
+
+A full-stack reverse ride-hailing platform connecting users with drivers through secure booking and real-time ride management.
+
+**Highlights**
+
+- JWT Authentication
+- Role-Based Access Control
+- Real-time booking updates
+- Responsive dashboards
+- MERN Architecture
+
+**Tech Stack**
+
+React • Node.js • Express • MongoDB • Socket.IO
+
+---
+
+# 🏆 Certifications
+
+- Oracle Cloud Infrastructure Data Science Professional
+- Oracle Agentic AI Foundations Associate
+- Applied Machine Learning in Python (Coursera)
+- NPTEL – Internet of Things
+- AWS Technical Essentials
+
+---
+
+# 🎓 Education
+
+**B.Tech Computer Science (AI & ML)**
+
+VIT Bhopal University
+
+CGPA: **8.75**
+
+---
+
+# 📫 Connect With Me
+
+🌐 Portfolio  
+https://priyanshu02-portfolio.vercel.app/
+
+💼 LinkedIn  
+https://www.linkedin.com/in/priyanshu-ranjan-74170a227
+
+💻 GitHub  
+https://github.com/priyanshuranjan02
+
+📧 Email  
+**ranjanpriyanshu441@gmail.com**
+
+---
+
+# ⚙️ Run Locally
+
+```bash
+git clone https://github.com/priyanshuranjan02/Priyanshu-Ranjan-Portfolio.git
+
+cd Priyanshu-Ranjan-Portfolio
+
+npm install
+
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+© 2026 Priyanshu Ranjan. All Rights Reserved.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+<div align="center">
 
-## What technologies are used for this project?
+### ⭐ If you like this project, consider giving it a Star!
 
-This project is built with:
+Made with ❤️ by **Priyanshu Ranjan**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c62d6626-d3a9-4bf1-9fb2-d637a2810d69) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+</div>
