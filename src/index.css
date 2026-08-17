@@ -4,15 +4,20 @@
 
 /*
   Design System – Professional Light & Dark Theme
-  All colors are defined in HSL
+  Theme-aware UI with consistent glassmorphism,
+  gradients, shadows, and responsive contrast.
 */
 
-/* =========================
+/* =========================================================
    THEME VARIABLES
-========================= */
+========================================================= */
+
 @layer base {
 
-  /* 🌞 LIGHT THEME (default) */
+  /* =======================================================
+     LIGHT THEME
+  ======================================================= */
+
   :root {
     /* Background & text */
     --background: 210 40% 98%;
@@ -61,16 +66,26 @@
       hsl(210 30% 90%)
     );
 
-    /* Shadows */
-    --shadow-blue: 0 10px 30px -10px hsl(210 100% 50% / 0.25);
-    --shadow-glow: 0 0 30px hsl(210 100% 50% / 0.35);
+    /* Light-mode shadows */
+    --shadow-blue:
+      0 10px 30px -10px hsl(210 100% 50% / 0.20);
+
+    --shadow-glow:
+      0 0 30px hsl(210 100% 50% / 0.20);
 
     /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth:
+      all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --transition-bounce:
+      all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  /* 🌙 DARK THEME (Your original design) */
+
+  /* =======================================================
+     DARK THEME
+  ======================================================= */
+
   .dark {
     --background: 222 40% 8%;
     --foreground: 0 0% 96%;
@@ -100,6 +115,7 @@
     --input: 225 25% 20%;
     --ring: 210 100% 60%;
 
+    /* Dark gradients */
     --gradient-primary: linear-gradient(
       135deg,
       hsl(210 100% 60%),
@@ -112,33 +128,52 @@
       hsl(225 35% 12%)
     );
 
-    --shadow-blue: 0 10px 30px -10px hsl(210 100% 60% / 0.35);
-    --shadow-glow: 0 0 40px hsl(210 100% 60% / 0.45);
+    /* Dark-mode shadows */
+    --shadow-blue:
+      0 10px 30px -10px hsl(210 100% 60% / 0.35);
+
+    --shadow-glow:
+      0 0 40px hsl(210 100% 60% / 0.45);
   }
 }
 
-/* =========================
+
+/* =========================================================
    BASE STYLES
-========================= */
+========================================================= */
+
 @layer base {
+
   * {
     @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-poppins;
-    transition: var(--transition-smooth);
   }
 
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Better text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
-/* =========================
-   UTILITIES
-========================= */
+
+/* =========================================================
+   CUSTOM UTILITIES
+========================================================= */
+
 @layer utilities {
+
   .text-gradient {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -172,150 +207,754 @@
 }
 
 
-.gradient-ring{
+/* =========================================================
+   PROFILE GRADIENT RING
+========================================================= */
 
-position:relative;
+.gradient-ring {
+  position: relative;
 
-width:300px;
+  width: 300px;
+  height: 300px;
 
-height:300px;
+  padding: 5px;
 
-padding:5px;
+  border-radius: 9999px;
 
-border-radius:9999px;
+  background: linear-gradient(
+    45deg,
+    #22d3ee,
+    #3b82f6,
+    #7c3aed,
+    #22d3ee
+  );
 
-background:linear-gradient(
-45deg,
-#22d3ee,
-#3b82f6,
-#7c3aed,
-#22d3ee
-);
+  background-size: 300% 300%;
 
-background-size:300% 300%;
+  animation: gradientRotate 6s linear infinite;
 
-animation:gradientRotate 6s linear infinite;
-
-box-shadow:
-0 0 25px rgba(59,130,246,.4),
-0 0 60px rgba(59,130,246,.25),
-0 0 100px rgba(59,130,246,.15);
-
+  box-shadow:
+    0 0 25px rgba(59, 130, 246, 0.40),
+    0 0 60px rgba(59, 130, 246, 0.25),
+    0 0 100px rgba(59, 130, 246, 0.15);
 }
 
-.gradient-ring img{
+.gradient-ring img {
+  border-radius: 9999px;
 
-border-radius:9999px;
+  width: 100%;
+  height: 100%;
 
-width:100%;
-
-height:100%;
-
-background:white;
-
-}
-
-.floating{
-
-animation:
-gradientRotate 6s linear infinite,
-floating 6s ease-in-out infinite;
-
-}
-
-@keyframes gradientRotate{
-
-0%{
-
-background-position:0% 50%;
-
-}
-
-50%{
-
-background-position:100% 50%;
-
-}
-
-100%{
-
-background-position:0% 50%;
-
-}
-
-}
-
-@keyframes floating{
-
-0%,
-100%{
-
-transform:translateY(0px);
-
-}
-
-50%{
-
-transform:translateY(-10px);
-
-}
-
+  background: white;
 }
 
 
-.tech-chip{
+/* =========================================================
+   FLOATING ELEMENTS
+========================================================= */
 
-display:flex;
-
-align-items:center;
-
-gap:8px;
-
-padding:10px 14px;
-
-border-radius:9999px;
-
-background:rgba(255,255,255,.06);
-
-backdrop-filter:blur(12px);
-
-border:1px solid rgba(255,255,255,.12);
-
-color:white;
-
-font-size:.85rem;
-
-font-weight:600;
-
-animation:chipFloat 6s ease-in-out infinite;
-
-transition:.3s;
-
-}
-
-.tech-chip:hover{
-
-transform:scale(1.08);
-
-box-shadow:0 0 25px rgba(34,211,238,.35);
-
-border-color:#22d3ee;
-
+.floating {
+  animation:
+    gradientRotate 6s linear infinite,
+    floating 6s ease-in-out infinite;
 }
 
 
-@keyframes chipFloat{
+/* =========================================================
+   GRADIENT ANIMATION
+========================================================= */
 
-0%,100%{
+@keyframes gradientRotate {
 
-transform:translateY(0px);
+  0% {
+    background-position: 0% 50%;
+  }
 
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-50%{
 
-transform:translateY(-8px);
+/* =========================================================
+   FLOATING ANIMATION
+========================================================= */
 
+@keyframes floating {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
+
+/* =========================================================
+   TECH CHIP
+========================================================= */
+
+.tech-chip {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 14px;
+
+  border-radius: 9999px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: white;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  animation:
+    chipFloat 6s ease-in-out infinite;
+
+  transition:
+    0.3s;
+}
+
+.tech-chip:hover {
+
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 25px rgba(34, 211, 238, 0.35);
+
+  border-color:
+    #22d3ee;
+}
+
+
+@keyframes chipFloat {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   LIGHT MODE COMPATIBILITY
+   ---------------------------------------------------------
+   These rules make existing hard-coded dark utility classes
+   readable when the user switches to light mode.
+
+   Dark mode remains unchanged.
+========================================================= */
+
+html:not(.dark) body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+
+/* =========================================================
+   DARK SURFACES → LIGHT SURFACES
+========================================================= */
+
+html:not(.dark) .bg-slate-950 {
+  background-color: #f8fafc !important;
+}
+
+html:not(.dark) .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+html:not(.dark) .bg-slate-800 {
+  background-color: #f1f5f9 !important;
+}
+
+
+/* Semi-transparent dark surfaces */
+
+html:not(.dark) .bg-slate-900\/80,
+html:not(.dark) .bg-slate-900\/85,
+html:not(.dark) .bg-slate-900\/90 {
+  background-color:
+    rgba(255, 255, 255, 0.88) !important;
+}
+
+html:not(.dark) .bg-slate-800\/70,
+html:not(.dark) .bg-slate-800\/80,
+html:not(.dark) .bg-slate-800\/90 {
+  background-color:
+    rgba(241, 245, 249, 0.92) !important;
+}
+
+
+/* =========================================================
+   WHITE TRANSPARENT SURFACES
+========================================================= */
+
+html:not(.dark) .bg-white\/5 {
+  background-color:
+    rgba(255, 255, 255, 0.78) !important;
+}
+
+html:not(.dark) .bg-white\/10 {
+  background-color:
+    rgba(255, 255, 255, 0.92) !important;
+}
+
+
+/* =========================================================
+   LIGHT MODE TEXT CONTRAST
+========================================================= */
+
+html:not(.dark) .text-white {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-100 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-200 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #64748b !important;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #64748b !important;
+}
+
+
+/* =========================================================
+   LIGHT MODE BORDERS
+========================================================= */
+
+html:not(.dark) .border-white\/10 {
+  border-color:
+    rgba(15, 23, 42, 0.10) !important;
+}
+
+html:not(.dark) .border-white\/\[0\.10\] {
+  border-color:
+    rgba(15, 23, 42, 0.10) !important;
+}
+
+html:not(.dark) .border-white\/\[0\.12\] {
+  border-color:
+    rgba(15, 23, 42, 0.12) !important;
+}
+
+
+/* =========================================================
+   LIGHT MODE SHADOWS
+========================================================= */
+
+html:not(.dark)
+[class*="shadow-[0_6px_20px_rgba(15,23,42"] {
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.10),
+    0 0 20px rgba(59, 130, 246, 0.08) !important;
+}
+
+html:not(.dark)
+[class*="shadow-[0_8px_25px_rgba(15,23,42"] {
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.12),
+    0 0 25px rgba(34, 211, 238, 0.12) !important;
+}
+
+
+/* =========================================================
+   LIGHT MODE TECH CHIPS
+========================================================= */
+
+html:not(.dark) .tech-chip {
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  border-color:
+    rgba(15, 23, 42, 0.10);
+
+  color:
+    #0f172a;
+
+  box-shadow:
+    0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
+html:not(.dark) .tech-chip:hover {
+  background:
+    rgba(255, 255, 255, 0.98);
+
+  border-color:
+    #22d3ee;
+
+  color:
+    #0f172a;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.10),
+    0 0 25px rgba(34, 211, 238, 0.25);
+}
+
+
+/* =========================================================
+   LIGHT MODE PROFILE RING
+========================================================= */
+
+html:not(.dark) .gradient-ring {
+  box-shadow:
+    0 0 25px rgba(59, 130, 246, 0.28),
+    0 0 60px rgba(59, 130, 246, 0.16),
+    0 0 100px rgba(59, 130, 246, 0.08);
+}
+
+
+/* =========================================================
+   LIGHT MODE IMAGE BACKGROUND
+========================================================= */
+
+html:not(.dark) .gradient-ring img {
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   REDUCE EXCESSIVE DARK OVERLAYS IN LIGHT MODE
+========================================================= */
+
+html:not(.dark) [class*="bg-black/"] {
+  background-color:
+    rgba(255, 255, 255, 0.35) !important;
+}
+
+
+/* =========================================================
+   LIGHT MODE NAVBAR / GLASS SURFACES
+========================================================= */
+
+html:not(.dark) [class*="backdrop-blur"] {
+  --tw-backdrop-blur:
+    blur(16px);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* =========================================================
+   LIGHT MODE NAVBAR FIX
+========================================================= */
+
+html:not(.dark) header {
+  background:
+    rgba(255, 255, 255, 0.82) !important;
+
+  color:
+    #0f172a !important;
+
+  border-color:
+    rgba(15, 23, 42, 0.08) !important;
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.08) !important;
+
+  backdrop-filter:
+    blur(18px) saturate(140%) !important;
+
+  -webkit-backdrop-filter:
+    blur(18px) saturate(140%) !important;
+}
+
+
+/* Override common dark navbar backgrounds */
+html:not(.dark) header.bg-slate-950,
+html:not(.dark) header.bg-slate-950\/80,
+html:not(.dark) header.bg-slate-950\/90,
+html:not(.dark) header.bg-slate-900,
+html:not(.dark) header.bg-slate-900\/80,
+html:not(.dark) header.bg-slate-900\/90,
+html:not(.dark) header.bg-black,
+html:not(.dark) header.bg-black\/20,
+html:not(.dark) header.bg-black\/30,
+html:not(.dark) header.bg-black\/40,
+html:not(.dark) header.bg-black\/50 {
+  background:
+    rgba(255, 255, 255, 0.82) !important;
+}
+
+
+/* Navbar text */
+html:not(.dark) header .text-white {
+  color:
+    #0f172a !important;
+}
+
+html:not(.dark) header .text-slate-100 {
+  color:
+    #0f172a !important;
+}
+
+html:not(.dark) header .text-slate-200 {
+  color:
+    #1e293b !important;
+}
+
+html:not(.dark) header .text-slate-300 {
+  color:
+    #475569 !important;
+}
+
+html:not(.dark) header .text-slate-400 {
+  color:
+    #64748b !important;
+}
+
+
+/* Navbar borders */
+html:not(.dark) header .border-white\/10,
+html:not(.dark) header .border-white\/\[0\.10\],
+html:not(.dark) header .border-white\/\[0\.12\] {
+  border-color:
+    rgba(15, 23, 42, 0.10) !important;
+}
+
+
+/* Navbar pill / glass container */
+html:not(.dark) header [class*="bg-slate-900"],
+html:not(.dark) header [class*="bg-slate-950"] {
+  background:
+    rgba(255, 255, 255, 0.72) !important;
+}
+
+
+/* Keep active Home gradient unchanged */
+html:not(.dark) header .gradient-primary {
+  color:
+    white !important;
+}
+
+
+/* =========================================================
+   AMBIENT PORTFOLIO BACKGROUND
+   Blue / Cyan only
+========================================================= */
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+/* Main blue glow */
+.ambient-orb-blue {
+  width: 520px;
+  height: 520px;
+  top: 5%;
+  left: -10%;
+
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.16) 0%,
+    rgba(59, 130, 246, 0.08) 35%,
+    transparent 72%
+  );
+}
+
+/* Cyan glow */
+.ambient-orb-cyan {
+  width: 480px;
+  height: 480px;
+  top: 25%;
+  right: -10%;
+
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.13) 0%,
+    rgba(34, 211, 238, 0.06) 38%,
+    transparent 72%
+  );
+}
+
+/* Soft sky-blue glow */
+.ambient-orb-sky {
+  width: 420px;
+  height: 420px;
+  bottom: 5%;
+  left: 35%;
+
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.10) 0%,
+    rgba(96, 165, 250, 0.04) 40%,
+    transparent 72%
+  );
+}
+
+
+/* =========================================================
+   CURSOR GLOW
+========================================================= */
+
+.cursor-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 9999px;
+
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.10) 0%,
+    rgba(59, 130, 246, 0.045) 30%,
+    transparent 70%
+  );
+
+  filter: blur(25px);
+
+  will-change: left, top;
+}
+
+
+/* =========================================================
+   FLOATING PARTICLES
+========================================================= */
+
+.ambient-particle {
+  position: absolute;
+
+  border-radius: 9999px;
+
+  background: #60a5fa;
+
+  box-shadow:
+    0 0 8px rgba(96, 165, 250, 0.45),
+    0 0 18px rgba(56, 189, 248, 0.20);
+
+  will-change: transform, opacity;
+}
+
+
+/* =========================================================
+   SUBTLE GRID
+========================================================= */
+
+.ambient-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(96, 165, 250, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(96, 165, 250, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 18%,
+    black 82%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 18%,
+    black 82%,
+    transparent 100%
+  );
+}
+
+
+/* =========================================================
+   VIGNETTE
+========================================================= */
+
+.ambient-vignette {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(2, 6, 23, 0.12),
+      transparent 18%,
+      transparent 82%,
+      rgba(2, 6, 23, 0.12)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LIGHT MODE
+   Much softer so the background doesn't overpower content.
+========================================================= */
+
+:root:not(.dark) .ambient-orb-blue {
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(59, 130, 246, 0.035) 35%,
+    transparent 72%
+  );
+}
+
+:root:not(.dark) .ambient-orb-cyan {
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.07) 0%,
+    rgba(34, 211, 238, 0.025) 38%,
+    transparent 72%
+  );
+}
+
+:root:not(.dark) .ambient-orb-sky {
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.055) 0%,
+    rgba(96, 165, 250, 0.02) 40%,
+    transparent 72%
+  );
+}
+
+:root:not(.dark) .cursor-glow {
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.07) 0%,
+    rgba(59, 130, 246, 0.025) 35%,
+    transparent 70%
+  );
+}
+
+:root:not(.dark) .ambient-particle {
+  opacity: 0.35;
+  background: #3b82f6;
+
+  box-shadow:
+    0 0 7px rgba(59, 130, 246, 0.25);
+}
+
+:root:not(.dark) .ambient-grid {
+  background-image:
+    linear-gradient(
+      rgba(59, 130, 246, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(59, 130, 246, 0.018) 1px,
+      transparent 1px
+    );
+}
+
+:root:not(.dark) .ambient-vignette {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(226, 232, 240, 0.15),
+      transparent 18%,
+      transparent 82%,
+      rgba(226, 232, 240, 0.15)
+    );
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .ambient-orb-blue {
+    width: 320px;
+    height: 320px;
+    left: -25%;
+  }
+
+  .ambient-orb-cyan {
+    width: 300px;
+    height: 300px;
+    right: -25%;
+  }
+
+  .ambient-orb-sky {
+    width: 280px;
+    height: 280px;
+  }
+
+  .cursor-glow {
+    display: none;
+  }
+
+  .ambient-grid {
+    background-size: 55px 55px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb,
+  .ambient-particle,
+  .cursor-glow {
+    animation: none !important;
+    transition: none !important;
+  }
 }

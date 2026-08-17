@@ -19,10 +19,14 @@ const projects = [
         "Built a scalable cloud-native architecture with Supabase Edge Functions, AI recommendations, and 2–5 second response times.",
       ],
       technologies: ["React", "TypeScript", "Node.js", "Supabase", "Gemini 2.5 Pro", "JWT", "Tailwind CSS"],
-      status: "Completed",
       image: healthBotImage,
       githubUrl: "https://github.com/priyanshuranjan02/AI-HealthBot-Companion",
-      ExternalLink: "https://ai-health-bot-companion.vercel.app/"
+      ExternalLink: "https://ai-health-bot-companion.vercel.app/",
+      snapshot: [
+      { value: "12", label: "Screens" },
+      { value: "30+", label: "React Components" },
+      { value: "2–5s", label: "AI Response" },
+    ],
   },
   {
     title: "Aadhaar Insights Analytics Platform",
@@ -34,26 +38,35 @@ const projects = [
       "Built a 9-page analytics platform featuring Power BI dashboards, KPI monitoring, anomaly detection, trend analysis, and automated recommendations.",
       "Developed and benchmarked 3 forecasting models (Baseline, Linear Regression, and Random Forest) for predictive analysis of Aadhaar enrolment and update trends."
     ],
-      technologies: ["Python", "Pandas", "NumPy", "Plotly", "Matplotlib", "Scikit-Learn", "RandomForest", "Linear Regression", "Power BI"],
-      status: "Completed",
+      technologies: ["Python", "Pandas", "NumPy", "Scikit-Learn", "RandomForest", "Linear Regression", "Power BI", "Plotly", "Streamlit"],
       image: aadharInsightsImage,
       githubUrl: "https://github.com/priyanshuranjan02/Aadhaar-Insights-Analytics-Platform",
-      ExternalLink: "https://aadhaar-insights.streamlit.app/"
+      ExternalLink: "https://aadhaar-insights.streamlit.app/",
+      snapshot: [
+      { value: "3.37M+", label: "Records" },
+      { value: "57", label: "States" },
+      { value: "964", label: "Districts" },
+    ],
   },
   {
     title: "Swayam Saarthi",
       type: "Full-Stack MERN Platform",
-      duration: "December 2025 – Ongoing",
+      duration: "December 2025 – July 2026",
       description: "Developed a reverse ride-hailing platform where users request rides and nearby drivers compete through a bidding workflow. The platform provides secure authentication, role-based dashboards, booking lifecycle management, and real-time driver interaction.",
       features: [
-        "Developed a full-stack reverse ride-hailing platform with 15 React pages, 28+ REST APIs, 5 MongoDB collections, and 3 role-based portals (User, Driver, Admin).",
+        "Developed a full-stack reverse ride-hailing platform with 25+ React pages, 35+ REST APIs, 6 MongoDB collections, and 3 role-based portals (User, Driver, Admin).",
         "Implemented a 5-stage booking lifecycle with JWT authentication, RBAC, and responsive dashboards for seamless user and driver experiences.",
-        "Built a scalable MERN architecture using 20+ reusable React components, Socket.IO real-time communication, and modular backend services for booking and ride management."
+        "Built a scalable MERN architecture using 40+ reusable React components, Socket.IO real-time communication, and modular backend services for booking and ride management."
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Google Maps API", "JWT"],
-      status: "In Development",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "OpenStreetMap", "JWT"],
       image: swayamSaarthiImage,
-    githubUrl: "https://github.com/priyanshuranjan02/Swayam-Saarthi"
+      githubUrl: "https://github.com/priyanshuranjan02/Swayam-Saarthi",
+      ExternalLink: "https://swayam-saarthi.vercel.app/",
+      snapshot: [
+      { value: "25+", label: "React Pages" },
+      { value: "35+", label: "REST APIs" },
+      { value: "6", label: "MongoDB Collections" },
+    ],
   }
 ];
 
@@ -78,126 +91,384 @@ export function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="group"
+              transition={{ duration: 0.7, delay: index * 0.12 }}
+              viewport={{ once: true, amount: 0.15 }}
+              whileHover={{ y: -4 }}
+              className="group w-full"
             >
-              <Card className="overflow-hidden bg-card border-border shadow-lg hover:shadow-purple transition-all duration-500 h-full">
-                {/* Project Image */}
-                <div className="relative overflow-hidden h-48 bg-gradient-to-br from-primary/20 to-primary/5">
-                  <motion.img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <Card
+                className="
+                  overflow-hidden
+                  bg-card
+                  border-border
+                  shadow-lg
+                  hover:shadow-purple
+                  transition-all
+                  duration-500
+                "
+              >
+                <div className="grid lg:grid-cols-[280px_1fr] gap-0">
+          
+                  {/* =========================
+                      PROJECT VISUAL + SNAPSHOT
+                  ========================= */}
+                  <div className="relative flex flex-col items-center p-5 lg:p-6">
                   
-                  {project.features && (
-                    <div className="absolute top-4 left-4">
-                      {/* <Badge className="bg-primary text-primary-foreground">
-                        <Star className="w-3 h-3 mr-1" />
-                        Featured
-                      </Badge> */}
-                      <Badge 
-                        variant={project.status === "Completed" ? "default" : "secondary"}
-                        className="px-3 py-1"
+                    {/* Project Image */}
+                    <div
+                      className="
+                        relative
+                        w-full
+                        max-w-[280px]
+                        aspect-[4/3]
+                        overflow-hidden
+                        rounded-2xl
+                        border
+                        border-border
+                        bg-gradient-to-br
+                        from-primary/10
+                        to-primary/5
+                        shadow-lg
+                        transition-all
+                        duration-500
+                        group-hover:border-primary/40
+                        group-hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]
+                      "
+                    >
+                      <motion.img
+                        src={project.image}
+                        alt={project.title}
+                        className="
+                          absolute
+                          inset-0
+                          w-full
+                          h-full
+                          object-cover
+                          transition-transform
+                          duration-700
+                          group-hover:scale-105
+                        "
+                      />
+
+                      {/* Subtle overlay */}
+                      <div
+                        className="
+                          absolute
+                          inset-0
+                          bg-gradient-to-t
+                          from-black/30
+                          via-transparent
+                          to-transparent
+                        "
+                      />
+
+                      {/* Status */}
+                      {/* {project.features && (
+                        <div className="absolute top-3 left-3">
+                          <Badge
+                            variant={
+                              project.status === "Completed"
+                                ? "default"
+                                : "secondary"
+                            }
+                            className="
+                              rounded-full
+                              px-3
+                              py-1
+                              text-xs
+                              shadow-lg
+                              backdrop-blur-md
+                            "
+                          >
+                            {project.status}
+                          </Badge>
+                        </div>
+                      )} */}
+
+                      {/* Project Number */}
+                      <div
+                        className="
+                          absolute
+                          bottom-3
+                          left-3
+                          flex
+                          h-8
+                          w-8
+                          items-center
+                          justify-center
+                          rounded-full
+                          bg-black/55
+                          border
+                          border-white/20
+                          text-xs
+                          font-bold
+                          text-white
+                          backdrop-blur-md
+                        "
                       >
-                        {project.status}
-                      </Badge>
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
                     </div>
-                  )}
-                </div>
-
-                <div className="p-6">
-                  {/* Project Title */}
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  
-                  {/* Type */}
-                  <p className="text-sm font-medium text-primary mb-1">
-                    {project.type}
-                  </p>
-
-                  {/* Duration */}
-                  <p className="text-sm text-muted-foreground mb-3">
-                    {project.duration}
-                  </p>
-
-                  {/* Project Description */}
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  {/* Key Features */}
-                  <div className="mb-4">
-                    <p className="font-semibold text-foreground mb-2">
-                      Key Features:
-                    </p>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      {project.features.map((feature, i) => (
-                        <li key={i} className="flex gap-2">
-                          <span className="text-primary">•</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge 
-                        key={techIndex} 
-                        variant="secondary"
-                        className="text-xs bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                      asChild
-                    >
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
                     
-                    <Button
-                      size="sm"
-                      className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-purple transition-all duration-300"
-                      asChild
-                    >
-                      <a
-                        href={project.ExternalLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
+                    
+                    {/* =========================
+                        PROJECT SNAPSHOT
+                    ========================= */}
+                    {project.snapshot && (
+                      <div className="w-full max-w-[280px] mt-4">
+                      
+                        <p
+                          className="
+                            mb-2
+                            text-[10px]
+                            font-semibold
+                            uppercase
+                            tracking-[0.18em]
+                            text-muted-foreground
+                          "
+                        >
+                          Project Snapshot
+                        </p>
+                    
+                        <div className="grid grid-cols-3 gap-2">
+                          {project.snapshot.map((metric, metricIndex) => (
+                            <motion.div
+                              key={metricIndex}
+                              whileHover={{ y: -2 }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 20,
+                              }}
+                              className="
+                                rounded-xl
+                                border
+                                border-primary/10
+                                bg-primary/[0.04]
+                                px-2
+                                py-3
+                                text-center
+                                transition-all
+                                duration-300
+                                hover:border-primary/30
+                                hover:bg-primary/[0.08]
+                              "
+                            >
+                              <p
+                                className="
+                                  text-lg
+                                  font-bold
+                                  leading-none
+                                  text-primary
+                                "
+                              >
+                                {metric.value}
+                              </p>
+                            
+                              <p
+                                className="
+                                  mt-1.5
+                                  text-[9px]
+                                  font-medium
+                                  leading-tight
+                                  text-muted-foreground
+                                "
+                              >
+                                {metric.label}
+                              </p>
+                            </motion.div>
+                          ))}
+                        </div>
+                        
+                        
+                        {/* =========================
+                            PROJECT ACTIONS
+                        ========================= */}
+                        <div className="mt-4 flex flex-col gap-2">
+                        
+                          {/* View Code */}
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="
+                              w-full
+                              h-10
+                              border-primary/50
+                              text-primary
+                              hover:bg-primary
+                              hover:text-primary-foreground
+                              transition-all
+                              duration-300
+                            "
+                            asChild
+                          >
+                            <a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Github className="w-4 h-4 mr-2" />
+                              View Code
+                            </a>
+                          </Button>
+                        
+                        
+                          {/* Live Demo */}
+                          <Button
+                            size="sm"
+                            className="
+                              w-full
+                              h-10
+                              bg-primary
+                              hover:bg-primary/90
+                              text-primary-foreground
+                              shadow-lg
+                              hover:shadow-purple
+                              transition-all
+                              duration-300
+                            "
+                            asChild
+                          >
+                            <a
+                              href={project.ExternalLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              Live Demo
+                            </a>
+                          </Button>
+                        
+                        </div>
+                        
+                      </div>
+                    )}
+
                   </div>
+                  
+                  
+                  {/* =========================
+                      PROJECT CONTENT
+                  ========================= */}
+                  <div className="flex flex-col p-6 lg:p-7">
+                  
+                    {/* Title */}
+                    <h3
+                      className="
+                        text-2xl
+                        lg:text-3xl
+                        font-bold
+                        text-foreground
+                        mb-2
+                        group-hover:text-primary
+                        transition-colors
+                        duration-300
+                      "
+                    >
+                      {project.title}
+                    </h3>
+                  
+                  
+                    {/* Type */}
+                    <p className="text-sm font-semibold text-primary mb-1">
+                      {project.type}
+                    </p>
+                  
+                  
+                    {/* Duration */}
+                    <p className="text-sm text-muted-foreground mb-4">
+                      {project.duration}
+                    </p>
+                  
+                  
+                    {/* Description */}
+                    <p
+                      className="
+                        text-muted-foreground
+                        leading-relaxed
+                        mb-5
+                      "
+                    >
+                      {project.description}
+                    </p>
+                  
+                  
+                    {/* Key Features */}
+                    <div className="mb-5">
+                  
+                      <p className="font-semibold text-foreground mb-2">
+                        Key Features
+                      </p>
+                  
+                      <ul className="space-y-2">
+                  
+                        {project.features.map((feature, i) => (
+                          <li
+                            key={i}
+                            className="
+                              flex
+                              gap-2
+                              text-sm
+                              text-muted-foreground
+                              leading-relaxed
+                            "
+                          >
+                            <span className="text-primary mt-0.5">
+                              •
+                            </span>
+                        
+                            <span>
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+
+                      </ul>
+                      
+                    </div>
+                      
+                      
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge
+                          key={techIndex}
+                          variant="secondary"
+                          className="
+                            text-xs
+                            px-3
+                            py-1
+                            bg-primary/10
+                            text-primary
+                            border
+                            border-primary/10
+                            hover:bg-primary
+                            hover:text-primary-foreground
+                            transition-all
+                            duration-300
+                          "
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+
+                    </div>
+                    
+                  </div>
+                    
                 </div>
               </Card>
             </motion.div>
           ))}
         </div>
-
+        
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

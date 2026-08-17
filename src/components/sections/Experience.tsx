@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 
 import { Card } from "@/components/ui/card";
-
 import reportPdf from "@/assets/VITB Experiential Learning Report (23BAI10691).pdf";
 
 import {
