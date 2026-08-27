@@ -78,26 +78,6 @@ const experiences = [
 
 const achievements = [
   {
-    title: "Google Cloud Arcade Facilitator Program",
-    organizer: "Google Cloud Skills Boost",
-    year: "2025",
-    description:
-      "Completed hands-on Google Cloud labs and AI learning paths through the official Arcade Facilitator Program.",
-    highlight: "Multiple Skill Badges",
-    icon: Award,
-  },
-
-  {
-    title: "National Financial Literacy Quiz",
-    organizer: "NISM (SEBI)",
-    year: "2025",
-    description:
-      "Participated in the National Financial Literacy Quiz conducted by NISM (SEBI).",
-    highlight: "Score: 15/15",
-    icon: Medal,
-  },
-
-  {
     title: "TCS CodeVita 2025",
     organizer: "Tata Consultancy Services",
     year: "2025",
@@ -105,6 +85,36 @@ const achievements = [
       "Qualified both rounds of TCS CodeVita, demonstrating strong competitive programming and problem-solving skills.",
     highlight: "AIR 9353 • AIR 1205",
     icon: Trophy,
+  },
+
+  {
+    title: "AI/ML Internship",
+    organizer: "MPOnline Limited",
+    year: "2026",
+    description:
+      "Successfully completed an internship in AI/ML at MPOnline Limited, gaining practical exposure to artificial intelligence and machine learning applications.",
+    highlight: "20 May – 31 July 2026",
+    icon: Medal,
+  },
+
+  {
+    title: "Advanced Software Eng & Dev Internship",
+    organizer: "MPOnline Limited",
+    year: "2026",
+    description:
+      "Successfully completed an internship in Advanced Software Eng and Dev at MPOnline, gaining hands-on experience in software development.",
+    highlight: "20 May – 31 July 2026",
+    icon: Award,
+  },
+
+  {
+    title: "Google Cloud Arcade Facilitator Program",
+    organizer: "Google Cloud Skills Boost",
+    year: "2025",
+    description:
+      "Completed hands-on Google Cloud labs and AI learning paths through the official Arcade Facilitator Program.",
+    highlight: "Multiple Skill Badges",
+    icon: Award,
   },
 ];
 
@@ -463,8 +473,7 @@ export function Experience() {
             reflect my passion for continuous learning and problem solving.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {achievements.map((item, index) => {
             
               const Icon = item.icon;
