@@ -227,7 +227,7 @@
 
 //             <GraduationCap className="h-8 w-8 text-cyan-400 mb-4 transition-transform duration-300 group-hover:rotate-6" />
 
-//             <h3 className="text-4xl font-bold text-white">8.75</h3>
+//             <h3 className="text-4xl font-bold text-white">8.81</h3>
 //             <p className="mt-2 text-lg font-medium text-cyan-300">CGPA</p>
 //             <p className="text-sm text-gray-400">Academic Performance</p>
 //           </div>
@@ -290,13 +290,12 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { ArrowDown, Brain, Database, Download, FolderKanban, GraduationCap, Github, Linkedin, Sparkles } from "lucide-react";
+import { ArrowDown, Brain, Database, FolderKanban, GraduationCap, Github, Linkedin, Sparkles } from "lucide-react";
 import { FaAws, FaJava, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
+import { ResumeDropdown } from "@/components/ResumeDropdown";
 
 // ---- adjust these two to your project ----
 import profileImage from "@/assets/my-profileImage.png";
-import resumePdf from "@/assets/Priyanshu Ranjan - Resume.pdf";
-const resumeUrl = resumePdf;
 const links = {
   github: "https://github.com/priyanshuranjan02",
   linkedin: "https://www.linkedin.com/in/priyanshu-ranjan-74170a227",
@@ -321,8 +320,8 @@ const techChips = [
 ];
 
 const stats = [
-  { icon: GraduationCap, value: "8.76", label: "CGPA", caption: "Academic Performance" },
-  { icon: FolderKanban, value: "5+", label: "Production Projects", caption: "AI • Full Stack • Analytics" },
+  { icon: GraduationCap, value: "8.81", label: "CGPA", caption: "Academic Performance" },
+  { icon: FolderKanban, value: "7+", label: "Projects", caption: "AI • Full Stack • Analytics" },
   { icon: Database, value: "3.37M+", label: "UIDAI Records", caption: "Data Analytics Platform" },
 ];
 
@@ -496,14 +495,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
             >
-              <a
-                href={resumeUrl}
-                download
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 px-6 py-3 text-sm font-bold text-white shadow-[0_18px_40px_-22px_#3b82f6] transition-transform hover:-translate-y-0.5"
-              >
-                <Download className="h-4 w-4" />
-                Download Resume
-              </a>
+              <ResumeDropdown variant="hero" />
               <a
                 href={links.github}
                 target="_blank"

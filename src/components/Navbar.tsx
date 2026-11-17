@@ -162,10 +162,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Download } from 'lucide-react';
 import profileImage from '@/assets/my-profileImage.png';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import resumePdf from '@/assets/Priyanshu Ranjan - Resume.pdf';
+import { ResumeDropdown } from '@/components/ResumeDropdown';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -176,9 +174,6 @@ const navItems = [
   { name: 'Experience', href: '#experience' },
   { name: 'Contact', href: '#contact' },
 ];
-
-// point this at your resume file (e.g. import resume from '@/assets/resume.pdf')
-const resumeUrl = resumePdf;
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -275,14 +270,7 @@ export function Navbar() {
               })}
             </ul>
 
-            <a
-              href={resumeUrl}
-              download
-              className="hidden items-center gap-2 rounded-full border border-blue-400/40 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-300 transition-colors hover:bg-blue-500/20 sm:inline-flex"
-            >
-              <Download className="h-4 w-4" />
-              Resume
-            </a>
+            <ResumeDropdown variant="navbar" />
 
             {/* <ThemeToggle />
 
@@ -325,14 +313,7 @@ export function Navbar() {
                   </li>
                 ))}
                 <li>
-                  <a
-                    href={resumeUrl}
-                    download
-                    className="mt-2 flex items-center justify-center gap-2 rounded-xl border border-blue-400/40 bg-blue-500/10 px-4 py-3 text-sm font-semibold text-blue-300"
-                  >
-                    <Download className="h-4 w-4" />
-                    Download Resume
-                  </a>
+                  <ResumeDropdown variant="mobile" />
                 </li>
               </ul>
             </motion.div>

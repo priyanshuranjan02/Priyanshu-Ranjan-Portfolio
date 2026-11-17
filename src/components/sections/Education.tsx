@@ -13,7 +13,7 @@ const educationData = [
     year: "2023 – Present",
     institution: "VIT Bhopal University",
     degree: "B.Tech Computer Science (AI & ML)",
-    score: "CGPA: 8.76",
+    score: "CGPA: 8.81",
     icon: GraduationCap,
     description:
       "Specializing in Artificial Intelligence & Machine Learning with strong foundations in software engineering and data-driven technologies.",
@@ -52,7 +52,7 @@ const educationData = [
 const academicHighlights = [
   {
     title: "CGPA",
-    value: "8.76",
+    value: "8.81",
   },
   {
     title: "Specialization",

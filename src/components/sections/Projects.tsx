@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Star } from 'lucide-react';
+import { ArrowRight, Github, ExternalLink, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -474,8 +475,14 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
+          <Button size="lg" className="transition-all duration-300" asChild>
+            <Link to="/projects">
+              Explore All Projects
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
           <Button
             variant="outline"
             size="lg"
@@ -484,7 +491,7 @@ export function Projects() {
           >
             <a href="https://github.com/priyanshuranjan02?tab=repositories" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
-              View All Projects on GitHub
+              View All on GitHub
             </a>
           </Button>
         </motion.div>
