@@ -83,7 +83,7 @@ const achievements = [
     year: "2025",
     description:
       "Qualified both rounds of TCS CodeVita, demonstrating strong competitive programming and problem-solving skills.",
-    highlight: "AIR 9353 • AIR 1205",
+    highlight: "AIR 9353 • AIR 1206",
     icon: Trophy,
   },
 
