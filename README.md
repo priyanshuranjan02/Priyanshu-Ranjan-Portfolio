@@ -1,187 +1,160 @@
-<div align="center">
+ <div align="center">
 
 # 👋 Hi, I'm Priyanshu Ranjan
 
 ### Aspiring Data Analyst | Full-Stack Developer | AI/ML Enthusiast
 
-Building intelligent applications, scalable web solutions, and data-driven analytics platforms.
+Building intelligent applications, full-stack products, and data-driven analytics solutions.
 
-<br>
-
-[![Portfolio](https://img.shields.io/badge/🌐-Portfolio-2563EB?style=for-the-badge)](https://priyanshu02-portfolio.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/priyanshu-ranjan-74170a227)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/priyanshuranjan02)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://priyanshu02-portfolio.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/priyanshu-ranjan-74170a227)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/priyanshuranjan02)
 
 </div>
 
 ---
 
-## 📌 About
+## 🚀 About Me
 
-I'm a B.Tech Computer Science (AI & ML) undergraduate at **VIT Bhopal University** passionate about building AI-powered applications, scalable full-stack systems, and data analytics solutions.
+I'm a B.Tech Computer Science student specializing in **Artificial Intelligence & Machine Learning at VIT Bhopal University**. I enjoy turning practical problems into useful software—from AI-assisted applications and secure backend systems to analytics platforms and interactive dashboards.
 
-I enjoy solving real-world problems through technology and continuously learning modern software development, machine learning, cloud computing, and analytics.
+My interests span **machine learning, data analytics, full-stack engineering, and product development**. I work primarily with Python and Java, and build web applications with React, TypeScript, Node.js, and modern backend technologies.
 
----
-
-## 🚀 Tech Stack
-
-### Languages
-
-- Java
-- Python
-- SQL
-- JavaScript
-- TypeScript
-
-### Frontend
-
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Vite
-
-### Backend
-
-- Node.js
-- Express.js
-- REST APIs
-- JWT Authentication
-
-### Databases
-
-- MongoDB
-- MySQL
-- Supabase
-
-### AI & Data
-
-- Machine Learning
-- Scikit-learn
-- Pandas
-- NumPy
-- Data Analytics
-
-### Cloud & Tools
-
-- AWS
-- Oracle Cloud
-- Google Cloud
-- Git
-- GitHub
-- Postman
+- 🎓 **Education:** B.Tech CSE (AI & ML), VIT Bhopal University
+- 📊 **CGPA:** 8.81
+- 🧭 **Focus areas:** Data Analytics · Full-Stack Development · AI/ML
+- 🌐 **Portfolio:** [priyanshu02-portfolio.vercel.app](https://priyanshu02-portfolio.vercel.app/)
 
 ---
 
-# ✨ Features
+## ✨ Portfolio Features
 
-- Modern responsive UI
-- Dark / Light theme
-- Smooth animations using Framer Motion
-- Interactive project showcase
-- Professional experience timeline
-- Skills & certifications section
-- Resume download
-- Contact section
-- Mobile friendly
-- Optimized performance
+- Responsive layout with dark/light theme support
+- Hero, About, Featured Projects, Skills, Education, Experience, and Contact sections
+- Dedicated **All Projects** page with category filters:
+  - AI / ML
+  - Data Analytics
+  - Full Stack
+- Four downloadable resume versions: General, AI/ML, Data Analyst, and Software Developer (SDE)
+- Project links to source repositories, live demos, and API documentation where available
+- Animated interactions and mobile-friendly navigation
 
 ---
 
-# 📂 Featured Projects
+## 💻 Featured Projects
 
-## 🚑 AI HealthBot Companion
+The homepage highlights these three projects.
 
-An AI-powered multilingual healthcare platform integrating Gemini AI for intelligent symptom assessment and preliminary health guidance.
+### 🚑 AI HealthBot – AI Symptom Assessment Platform
+
+A multilingual healthcare companion for structured symptom assessment, preliminary guidance, and risk-based triage, with secure user and NGO workflows.
 
 **Highlights**
+- AI-assisted symptom assessment and 3-level health risk triage
+- Secure authentication and user workflows
+- PDF report generation and NGO analytics dashboard
 
-- AI-powered symptom assessment
-- 3-level health risk triage
-- Secure authentication
-- PDF report generation
-- NGO analytics dashboard
+**Tech Stack:** React · TypeScript · Supabase · Gemini AI · JWT
 
-**Tech Stack**
+[Source Code](https://github.com/priyanshuranjan02/AI-HealthBot-Companion) · [Live Demo](https://ai-health-bot-companion.vercel.app/)
 
-React • Node.js • Supabase • Gemini AI • TypeScript
+### 📊 Aadhaar Insights Analytics Platform
 
----
-
-## 📊 Aadhaar Insights Analytics Platform
-
-An end-to-end analytics platform processing **3.37M+ UIDAI records** to generate interactive dashboards, insights, and forecasting models.
+An end-to-end public-data analytics platform for Aadhaar enrolment and update datasets, combining interactive dashboards, regional analysis, forecasting, and anomaly detection.
 
 **Highlights**
+- Interactive dashboards and KPI monitoring
+- Trend and regional analysis
+- Forecasting and anomaly detection workflows
 
-- Interactive dashboards
-- Trend analysis
-- KPI monitoring
-- Predictive analytics
-- Recommendation generation
+**Tech Stack:** Python · Pandas · Scikit-learn · Streamlit · Plotly · Power BI
 
-**Tech Stack**
+[Source Code](https://github.com/priyanshuranjan02/Aadhaar-Insights-Analytics-Platform) · [Live Demo](https://aadhaar-insights.streamlit.app/)
 
-Python • Streamlit • Power BI • Tableau • Machine Learning
+### 🚖 Swayam Saarthi
 
----
-
-## 🚖 Swayam Saarthi
-
-A full-stack reverse ride-hailing platform connecting users with drivers through secure booking and real-time ride management.
+A reverse ride-hailing platform where users request rides and drivers respond to booking requests, supported by role-based portals and real-time ride updates.
 
 **Highlights**
+- JWT authentication and role-based access
+- Ride booking and driver assignment workflows
+- Responsive user and driver dashboards
 
-- JWT Authentication
-- Role-Based Access Control
-- Real-time booking updates
-- Responsive dashboards
-- MERN Architecture
+**Tech Stack:** React · TypeScript · Node.js · Express · MongoDB · Socket.IO
 
-**Tech Stack**
-
-React • Node.js • Express • MongoDB • Socket.IO
+[Source Code](https://github.com/priyanshuranjan02/Swayam-Saarthi) · [Live Demo](https://swayam-saarthi.vercel.app/)
 
 ---
 
-# 🏆 Certifications
+## 📂 More Projects
+
+Explore the complete project collection on the website:
+
+### [Explore All Projects →](https://priyanshu02-portfolio.vercel.app/projects)
+
+| Project | Focus | Technologies |
+|---|---|---|
+| [AI-Powered Smart Retail & Customer Intelligence](https://github.com/priyanshuranjan02/AI-Smart-Retail-Customer-Intelligence-Platform) | Computer vision, sentiment analysis, and FAQ chatbot | Python, OpenCV, MobileNetV2, FastAPI, React |
+| [Smart Retail Analytics & Recommendation Warehouse](https://github.com/priyanshuranjan02/Smart-Retail-And-Recommendation-System) | Data warehouse, OLAP, customer segmentation, and basket analysis | Python, SQLite, Pandas, Scikit-learn, Streamlit |
+| [Aurelia Library Management System](https://github.com/priyanshuranjan02/Aurelia-Library) | Secure library management and circulation | Java 21, Spring Boot, Spring Security, MySQL, Flyway |
+| [Customer Churn Prediction Platform](https://github.com/priyanshuranjan02/Customer-Churn-Prediction-Project) | Explainable churn prediction and retention insights | Python, XGBoost, SHAP, FastAPI, Streamlit |
+
+---
+
+## 🛠️ Technical Skills
+
+| Category | Technologies |
+|---|---|
+| Languages | Java, Python, SQL, JavaScript, TypeScript |
+| Frontend | React, TypeScript, Tailwind CSS, Vite, Framer Motion |
+| Backend | Node.js, Express.js, FastAPI, Spring Boot, REST APIs, JWT |
+| Databases | MongoDB, MySQL, Supabase, SQLite |
+| AI / ML & Data | Scikit-learn, Pandas, NumPy, XGBoost, SHAP, OpenCV, Data Analytics |
+| Tools & Cloud | Git, GitHub, Postman, Docker, AWS, Oracle Cloud |
+
+---
+
+## 🎓 Education
+
+**VIT Bhopal University**
+
+B.Tech — Computer Science and Engineering (Artificial Intelligence & Machine Learning)
+
+**CGPA: 8.81**
+
+---
+
+## 🏆 Certifications
 
 - Oracle Cloud Infrastructure Data Science Professional
 - Oracle Agentic AI Foundations Associate
-- Applied Machine Learning in Python (Coursera)
-- NPTEL – Internet of Things
+- Applied Machine Learning in Python — Coursera
+- NPTEL — Internet of Things
 - AWS Technical Essentials
 
 ---
 
-# 🎓 Education
+## 📄 Resumes
 
-**B.Tech Computer Science (AI & ML)**
+Choose the version that best matches the role:
 
-VIT Bhopal University
-
-CGPA: **8.75**
-
----
-
-# 📫 Connect With Me
-
-🌐 Portfolio  
-https://priyanshu02-portfolio.vercel.app/
-
-💼 LinkedIn  
-https://www.linkedin.com/in/priyanshu-ranjan-74170a227
-
-💻 GitHub  
-https://github.com/priyanshuranjan02
-
-📧 Email  
-**ranjanpriyanshu441@gmail.com**
+| Resume | Download |
+|---|---|
+| General Resume | [Download PDF](https://priyanshu02-portfolio.vercel.app/resumes/Priyanshu_Ranjan_General_Resume.pdf) |
+| AI / ML Resume | [Download PDF](https://priyanshu02-portfolio.vercel.app/resumes/Priy​​anshu_Ranjan_AI_ML_Resume.pdf) |
+| Data Analyst Resume | [Download PDF](https://priyanshu02-portfolio.vercel.app/resumes/Priy​​anshu_Ranjan_Data_Analyst_Resume.pdf) |
+| Software Developer (SDE) Resume | [Download PDF](https://priyanshu02-portfolio.vercel.app/resumes/Priy​​anshu_Ranjan_SDE_Resume.pdf) |
 
 ---
 
-# ⚙️ Run Locally
+## ⚙️ Run Locally
+
+### Prerequisites
+
+- Node.js (LTS recommended)
+- npm
+
+### Installation
 
 ```bash
 git clone https://github.com/priyanshuranjan02/Priyanshu-Ranjan-Portfolio.git
@@ -193,16 +166,34 @@ npm install
 npm run dev
 ```
 
+Vite will print the local development URL in your terminal.
+
+### Available Scripts
+
+```bash
+npm run dev      # Start the development server
+npm run build    # Create a production build
+npm run lint     # Run ESLint
+npm run preview  # Preview the production build locally
+```
+
 ---
 
-© 2026 Priyanshu Ranjan. All Rights Reserved.
+## 📬 Connect With Me
+
+- **Portfolio:** [priyanshu02-portfolio.vercel.app](https://priyanshu02-portfolio.vercel.app/)
+- **LinkedIn:** [linkedin.com/in/priyanshu-ranjan-74170a227](https://www.linkedin.com/in/priyanshu-ranjan-74170a227)
+- **GitHub:** [github.com/priyanshuranjan02](https://github.com/priyanshuranjan02)
+- **Email:** [ranjanpriyanshu441@gmail.com](mailto:ranjanpriyanshu441@gmail.com)
 
 ---
 
 <div align="center">
 
-### ⭐ If you like this project, consider giving it a Star!
+© 2026 Priyanshu Ranjan
 
-Made with ❤️ by **Priyanshu Ranjan**
+**Built with React, TypeScript, Vite, Tailwind CSS, and Framer Motion.**
+
+⭐ If you find the work interesting, consider starring the repository.
 
 </div>
